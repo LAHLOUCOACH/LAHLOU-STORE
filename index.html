@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>طقم الصلاة</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Tahoma', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .center-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 600px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      text-align: center;
+      color: #000;
+    }
+
+    .center-wrapper img {
+      width: 90%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+      transition: 0.5s;
+    }
+
+    .price {
+      font-size: 22px;
+      margin: 10px;
+      color: #333;
+    }
+
+    a.order-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    a.order-btn:hover {
+      background-color: #218838;
+    }
+
+    @media (max-width: 600px) {
+      .center-wrapper img {
+        width: 100%;
+      }
+
+      .price {
+        font-size: 18px;
+      }
+
+      a.order-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- خلفية الفيديو -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://cdn.videezy.com/system/resources/previews/000/045/265/original/Waterfall_-_9358.mp4" type="video/mp4">
+    متصفحك لا يدعم عرض الفيديو.
+  </video>
+
+  <!-- محتوى الصفحة -->
+  <div class="center-wrapper">
+    <h2>طقم الصلاة الفاخر</h2>
+    <img src="https://i.imgur.com/fVXh9Lz.png" alt="صورة طقم الصلاة الكامل" />
+    <div class="price">السعر: 1500 دج فقط</div>
+    <a class="order-btn" href="https://www.facebook.com/profile.php?id=61578861930846" target="_blank">
+      اطلب الآن عبر فيسبوك
+    </a>
+  </div>
+
+</body>
+  </html>
