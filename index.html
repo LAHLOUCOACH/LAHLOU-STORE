@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>طقم الصلاة</title>
+  <meta charset="UTF-8">
+  <title>طقم الصلاة الفاخر</title>
   <style>
     * {
       margin: 0;
@@ -13,99 +12,75 @@
 
     body, html {
       height: 100%;
-      font-family: 'Tahoma', sans-serif;
-      color: white;
-      overflow: hidden;
+      font-family: Arial, sans-serif;
+      position: relative;
     }
 
-    #bg-video {
+    /* خلفية الفيديو */
+    .bg-video {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
       z-index: -1;
+      object-fit: cover;
+      filter: brightness(0.5);
     }
 
-    .center-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      max-width: 600px;
-      padding: 30px;
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-      text-align: center;
-      color: #000;
-    }
-
-    .center-wrapper img {
-      width: 90%;
+    /* محتوى البطاقة */
+    .card {
       max-width: 400px;
-      margin: 20px auto;
-      display: block;
-      transition: 0.5s;
+      margin: 100px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
     .price {
-      font-size: 22px;
-      margin: 10px;
-      color: #333;
-    }
-
-    a.order-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background-color: #28a745;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
       font-size: 18px;
-      transition: background 0.3s;
+      margin: 10px 0;
     }
 
-    a.order-btn:hover {
-      background-color: #218838;
+    .btn {
+      background-color: #2d862d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
-    @media (max-width: 600px) {
-      .center-wrapper img {
-        width: 100%;
-      }
-
-      .price {
-        font-size: 18px;
-      }
-
-      a.order-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-      }
+    .btn:hover {
+      background-color: #256f25;
     }
   </style>
 </head>
 <body>
 
-  <!-- خلفية الفيديو -->
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="https://cdn.videezy.com/system/resources/previews/000/045/265/original/Waterfall_-_9358.mp4" type="video/mp4">
-    متصفحك لا يدعم عرض الفيديو.
+  <!-- خلفية فيديو -->
+  <video class="bg-video" autoplay muted loop>
+    <source src="https://streamable.com/aqv2n0/video.mp4" type="video/mp4">
+    المتصفح لا يدعم تشغيل الفيديو.
   </video>
 
-  <!-- محتوى الصفحة -->
-  <div class="center-wrapper">
+  <!-- بطاقة المنتج -->
+  <div class="card">
     <h2>طقم الصلاة الفاخر</h2>
-    <img src="https://i.imgur.com/fVXh9Lz.png" alt="صورة طقم الصلاة الكامل" />
+    <img src="https://i.postimg.cc/Wzp22x5X/988d90db8a5236e29575e4c67531c7a9.jpg" alt="طقم الصلاة الفاخر">
     <div class="price">السعر: 1500 دج فقط</div>
-    <a class="order-btn" href="https://www.facebook.com/profile.php?id=61578861930846" target="_blank">
-      اطلب الآن عبر فيسبوك
-    </a>
+    <a class="btn" href="https://www.facebook.com/share/p/1CWEqRgHRZ/">اطلب الآن عبر فيسبوك</a>
   </div>
 
 </body>
-  </html>
+</html>
